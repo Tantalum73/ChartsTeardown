@@ -4,12 +4,16 @@ Teardown of charts in TradeRepublic App
 ## This is the compound project to [this blogpost](https://anerma.de/blog/tear-down-trade-republic-charts).
 I wanted to know how [TradeRepublic](https://www.traderepublic.com) made their charts and so I replicated it.
 
-<video src="TradeRepublicSmaller.mp4" width="320" height="200" controls preload></video>
+**Original:**<br>
+![Animated image showing the charts of TradeRepublic app.](Media/TradeRepublicSmaller.gif)
 
-I came real close, my key takeaways are:
+**Replicated:**<br>
+![Animated image showing my replicated version of the chart view.](Media/MyVersionAnimation.gif)
+
+I came real close and even was able to improve the original, my key takeaways are:
 * A chart is nothing more than scaled points connected by a line.
-* Using a CABasicAnimation to morph a CGPath is very smooth. By doing so almost the entire animation comes for free.
-* The animation benefits a lot by start drawing the chart from the right combined with proportional numbers of points.
+* Using a `CABasicAnimation` to morph a `CGPath` is very smooth. By doing so almost the entire animation comes for free.
+* The animation benefits a lot from start drawing the chart from the right combined with proportional numbers of points.
 * Interaction can be broken down into three steps. The most complicated part is to get the point next to the users finger and even that is straight foreward.
 * Accessibility is nothing that takes care of itself! This entire demo is missing accessibility adjustments in order to focus on the main visuals.
 * UIKit and CoreAnimation are just awsome frameworks 💯
